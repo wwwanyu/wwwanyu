@@ -101,7 +101,7 @@ header .scrolled {
   position: fixed;
   transform: rotate(90deg);
   transition: all 0.2s;
-  left: -70px;
+  left: -100px;
   top: 130px; }
   @media screen and (max-width: 1024px) {
     header .scrolled {
@@ -135,3 +135,7 @@ a.text-dark:hover {
 .category-list {
   padding: 0 0.2rem;
   list-style: none; }
+
+.article-tag-list-item {
+  display: inline;
+  padding-left: 10px; }
