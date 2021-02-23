@@ -14,12 +14,12 @@ body {
   grid-template-columns: 100%; }
 
 a {
-  color: #555;
-  border-bottom: 2px solid rgba(0, 123, 255, 0.5); }
+  color: #007bff;
+  border-bottom: 2px solid rgba(0, 123, 255, 0); }
   a:hover {
     color: #007bff;
     text-decoration: none;
-    border-bottom: 2px solid #007bff; }
+    border-bottom: 2px solid rgba(0, 123, 255, 0.5); }
 
 .heading {
   font-family: "utopia-std-display", serif; }
@@ -99,15 +99,23 @@ a {
 
 header .scrolled {
   position: fixed;
-  transform: rotate(90deg);
-  transition: all 0.2s;
-  left: -100px;
-  top: 130px; }
-  @media screen and (max-width: 1024px) {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(85, 85, 85, 0.1); }
+  @media screen and (min-width: 600px) {
     header .scrolled {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(85, 85, 85, 0.1);
+      transform: rotate(90deg);
+      transition: all 0.2s;
+      left: -100px;
+      top: 130px;
       left: -110px; } }
+  @media screen and (max-width: 599px) {
+    header .scrolled {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px;
+      transition: all 0.2s; } }
 
 a.text-dark:hover {
   color: #007bff !important; }
@@ -139,3 +147,22 @@ a.text-dark:hover {
 .article-tag-list-item {
   display: inline;
   padding-left: 10px; }
+
+.tag-list-count {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background-color: rgba(0, 123, 255, 0.3); }
+
+.article-tag-list {
+  padding: 0; }
+
+.article-tag-list-item:before {
+  content: "#";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgba(85, 85, 85, 0.7); }
