@@ -114,12 +114,12 @@ header .scrolled {
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 8px;
+      padding: 8px 8px 20px;
       transition: all 0.2s; } }
 
 @media screen and (max-width: 599px) {
   footer {
-    padding: 0 8px 80px; } }
+    padding: 0 8px 100px; } }
 
 a.text-dark:hover {
   color: #007bff !important; }
@@ -179,3 +179,6 @@ a.text-dark:hover {
 
 .archive-list-item {
   list-style: none; }
+
+.article.article-type-post {
+  max-width: initial; }
